@@ -1,0 +1,19 @@
+ private static void sort(Stack<Integer> s) {
+        if(s.isEmpty()){
+            return;
+        }
+        int x=s.pop();
+        sort(s);
+        helper(s,x);
+    }
+
+    private static void helper( Stack<Integer> q, int x) {
+        //1 10 4 5
+        if(q.isEmpty()||q.peek()<x){
+            q.push(x);
+            return;
+        }
+        int c=q.pop();
+        helper(q,x);
+        q.push(c);
+    }
