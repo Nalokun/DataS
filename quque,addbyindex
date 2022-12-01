@@ -1,0 +1,12 @@
+private static void sort(Queue<Integer> q,int index,int value) {
+        if(q.isEmpty()){
+            return;
+        }
+        int x=q.remove();
+        int v=q.size();
+        sort(q,index,value);
+        if(v==index-1){
+            q.add(value);
+        }
+        q.add(x);
+    }
