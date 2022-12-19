@@ -1,0 +1,28 @@
+
+    static void sort(int arr[]) {
+        for (int i = arr.length / 2 - 1; i >=0 ; i--) {
+            hesfi(arr, arr.length, i);
+        }
+        for (int i = arr.length - 1; i > 0; i--) {
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+            hesfi(arr,i,0);
+        }
+    }private static void hesfi(int[] arr, int length, int i) {
+        int r = 2 * i + 2;
+        int l = 2 * i + 1;
+        int max = i;
+        if (r < length && arr[max] < arr[r]) {
+            max = r;
+        }
+        if (l < length && arr[max] < arr[l]) {
+            max = l;
+        }
+        if (max != i) {
+            int temp = arr[i];
+            arr[i] = arr[max];
+            arr[max] = temp;
+            hesfi(arr, length, max);
+        }
+    }
