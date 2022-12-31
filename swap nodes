@@ -1,0 +1,18 @@
+Node cur = head;
+        Node cur2 = head;
+        Node prv = null;
+        Node prv2 = null;
+        while (cur.data != i) {
+            prv = cur;
+            cur = cur.next;
+        }
+        while (cur2.data != i1) {
+            prv2 = cur2;
+            cur2 = cur2.next;
+        }
+        cur2.next = cur.next;
+        cur.next = cur2.next;
+        prv2.next = cur;
+        if (prv != null) {
+            prv.next = cur2;
+        }
