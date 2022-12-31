@@ -1,0 +1,14 @@
+private void reverse(int i1) {
+        Node cur = head;
+        Node prv = null;
+        Node cur2 = null;
+        int i = 3;
+        while (cur != null && i > 0) {
+            cur2 = cur.next;
+            cur.next = prv;
+            prv = cur;
+            cur = cur2;
+            i--;
+        }
+        cur = prv;
+    }
