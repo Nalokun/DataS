@@ -1,0 +1,27 @@
+ /*
+ Input:
+ 
+X: 5 —> 7 —> 3 —> 4 —> null
+Y: 9 —> 4 —> 6 —> null
+ 
+Output: 6 —> 6 —> 8 —> 0 —> null
+ 
+(as 5734 + 946 = 6680)
+
+ 
+ 
+ 
+ */
+ 
+ 
+ private static void calucter(Node prv, Node head, Node head1) {
+        if (head== null && head1 == null) {
+            return;
+        }
+        calucter(head, head.next, head1.next);
+        head.data += head1.data;
+        if (head.data >= 10 && prv != null) {
+            prv.data += head.data / 10;
+            head.data = head.data % 10;
+        }
+    }
