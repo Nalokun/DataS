@@ -1,0 +1,19 @@
+  private static void set(Queue<BSTNode> q) {
+        if (q.isEmpty()) {
+            return;
+        }
+        int size = q.size();
+        for (int i = 0; i < size; i++) {
+            BSTNode data = q.poll();
+            System.out.print(data.data + " ");
+            if (data.right != null) {
+                q.add(data.right);
+            }
+            if (data.left != null) {
+                q.add(data.left);
+            }
+        }
+        System.out.println();
+
+        set(q);
+    }
