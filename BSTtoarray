@@ -1,0 +1,19 @@
+//    public static void BSTtoarray(TreeNode root, int i) {
+//        if (root == null)
+//            return;
+//        arr[i] = root.val;
+//        int j = 2 * i + 1;
+//        int j2 = 2 * i + 2;
+//        if (root.left != null) {
+//            arr[j] = root.left.val;
+//            BSTtoarray(root.left, j);
+//        } else {
+//
+//        }
+//        if (root.right != null) {
+//            arr[j2] = root.right.val;
+//            BSTtoarray(root.right, j2);
+//        } else {
+//
+//        }
+//    }
